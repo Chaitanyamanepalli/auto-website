@@ -4,15 +4,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome Page</title>
+    <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Hello, Website Generator!</h1>
-        <p id="message">Click the button below to see a message.</p>
-        <button id="actionButton">Click Me!</button>
-    </div>
+    <header class="navbar">
+        <div class="container">
+            <h1 class="logo">MyPortfolio</h1>
+            <nav>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero" class="hero-section">
+        <div class="container">
+            <p>Hi, I'm</p>
+            <h1>John Doe</h1>
+            <h2>A Passionate Web Developer</h2>
+            <p class="hero-description">Building beautiful and functional websites with a focus on user experience.</p>
+            <a href="#projects" class="btn">View My Work</a>
+        </div>
+    </section>
+
+    <section id="about" class="about-section section-padding">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <img src="https://via.placeholder.com/200" alt="John Doe" class="profile-pic">
+                <p>
+                    Hello! I'm John Doe, a dedicated web developer with a keen eye for detail and a passion for creating dynamic and intuitive user experiences.
+                    With a background in computer science, I specialize in front-end development using HTML, CSS, and JavaScript, and have experience with modern frameworks like React.
+                    I love turning complex problems into simple, beautiful, and efficient solutions. When I'm not coding, you can find me exploring new technologies or enjoying the outdoors.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills-section section-padding">
+        <div class="container">
+            <h2>My Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">HTML5</div>
+                <div class="skill-item">CSS3</div>
+                <div class="skill-item">JavaScript (ES6+)</div>
+                <div class="skill-item">React.js</div>
+                <div class="skill-item">Node.js</div>
+                <div class="skill-item">Express.js</div>
+                <div class="skill-item">MongoDB</div>
+                <div class="skill-item">Git & GitHub</div>
+                <div class="skill-item">Responsive Design</div>
+                <div class="skill-item">UI/UX Principles</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects-section section-padding">
+        <div class="container">
+            <h2>My Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Project 1">
+                    <h3>Project Title One</h3>
+                    <p>A web application built with React and Node.js for managing tasks and projects efficiently.</p>
+                    <div class="project-links">
+                        <a href="#" target="_blank" class="btn-small">Live Demo</a>
+                        <a href="#" target="_blank" class="btn-small">GitHub Repo</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Project 2">
+                    <h3>Project Title Two</h3>
+                    <p>An e-commerce storefront developed using vanilla JavaScript, focusing on performance and user experience.</p>
+                    <div class="project-links">
+                        <a href="#" target="_blank" class="btn-small">Live Demo</a>
+                        <a href="#" target="_blank" class="btn-small">GitHub Repo</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Project 3">
+                    <h3>Project Title Three</h3>
+                    <p>A personal blog platform with a custom CMS, styled entirely with modern CSS techniques.</p>
+                    <div class="project-links">
+                        <a href="#" target="_blank" class="btn-small">Live Demo</a>
+                        <a href="#" target="_blank" class="btn-small">GitHub Repo</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Project 4">
+                    <h3>Project Title Four</h3>
+                    <p>An interactive data visualization dashboard created with D3.js and a RESTful API backend.</p>
+                    <div class="project-links">
+                        <a href="#" target="_blank" class="btn-small">Live Demo</a>
+                        <a href="#" target="_blank" class="btn-small">GitHub Repo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section section-padding">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <p>I'm always open to new opportunities and collaborations. Feel free to reach out!</p>
+            <div class="contact-links">
+                <p>Email: <a href="mailto:john.doe@example.com">john.doe@example.com</a></p>
+                <p>LinkedIn: <a href="https://linkedin.com/in/johndoe" target="_blank">linkedin.com/in/johndoe</a></p>
+                <p>GitHub: <a href="https://github.com/johndoe" target="_blank">github.com/johndoe</a></p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="current-year"></span> John Doe. All rights reserved.</p>
+        </div>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
