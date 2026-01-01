@@ -1,138 +1,112 @@
-:root {
-    --bg-light: #f4f7f6;
-    --text-light: #333;
-    --card-light: #ffffff;
-    --primary-color: #007bff;
-    --secondary-color: #6c757d;
-    --border-color: #e0e0e0;
-    --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-body.dark-mode {
-    --bg-light: #121212;
-    --text-light: #e0e0e0;
-    --card-light: #1e1e1e;
-    --primary-color: #4da6ff;
-    --secondary-color: #adb5bd;
-    --border-color: #333;
-    --shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 body {
     font-family: 'Arial', sans-serif;
-    background-color: var(--bg-light);
-    color: var(--text-light);
-    transition: background-color 0.3s, color 0.3s;
+    background-color: #f4f7f6;
     display: flex;
     justify-content: center;
-    padding: 20px;
+    align-items: flex-start;
+    padding-top: 50px;
+    margin: 0;
 }
 
-.container {
-    width: 100%;
+#app-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 90%;
     max-width: 500px;
-    background-color: var(--card-light);
-    border-radius: 12px;
-    padding: 25px;
-    box-shadow: var(--shadow);
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-    border-bottom: 1px solid var(--border-color);
-    padding-bottom: 10px;
 }
 
 h1 {
-    font-size: 1.8em;
-    color: var(--primary-color);
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
 }
 
-#theme-toggle {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 1.5em;
-    padding: 5px;
-    transition: transform 0.2s;
-}
-
-#theme-toggle:hover {
-    transform: scale(1.1);
-}
-
-.input-area {
+#input-area {
     display: flex;
     margin-bottom: 20px;
 }
 
-#new-task-input {
+#task-input {
     flex-grow: 1;
     padding: 10px 15px;
-    border: 1px solid var(--border-color);
-    border-radius: 6px 0 0 6px;
-    font-size: 1em;
-    background-color: var(--card-light);
-    color: var(--text-light);
+    border: 2px solid #ddd;
+    border-radius: 5px 0 0 5px;
+    font-size: 16px;
+    outline: none;
 }
 
-#add-task-btn {
-    padding: 10px 15px;
-    background-color: var(--primary-color);
+#task-input:focus {
+    border-color: #007bff;
+}
+
+#add-button {
+    padding: 10px 20px;
+    background-color: #007bff;
     color: white;
     border: none;
-    border-radius: 0 6px 6px 0;
+    border-radius: 0 5px 5px 0;
     cursor: pointer;
-    font-size: 1em;
+    font-size: 16px;
     transition: background-color 0.2s;
 }
 
-#add-task-btn:hover {
+#add-button:hover {
     background-color: #0056b3;
 }
 
-#todo-list {
+#task-list {
     list-style: none;
     padding: 0;
 }
 
-.todo-item {
+#task-list li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 12px 0;
-    border-bottom: 1px solid var(--border-color);
+    padding: 12px 15px;
+    margin-bottom: 8px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    border-left: 5px solid #007bff;
     cursor: pointer;
-    transition: background-color 0.2s;
+    transition: background-color 0.2s, opacity 0.3s;
+    word-break: break-word;
 }
 
-.todo-item:last-child {
-    border-bottom: none;
+#task-list li:hover {
+    background-color: #eee;
 }
 
 .task-text {
     flex-grow: 1;
-    padding-left: 10px;
-    user-select: none;
 }
 
-.todo-item.completed .task-text {
-    text-decoration: line-through;
-    color: var(--secondary-color);
+/* Completed Task Style */
+.completed {
+    background-color: #e9ffe9 !important;
+    border-left-color: #28a745 !important;
     opacity: 0.7;
+}
+
+.completed .task-text {
+    text-decoration: line-through;
+    color: #888;
 }
 
 .delete-btn {
     background: none;
     border: none;
     color: #dc3545;
-    font-size: 1.2em;
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: 15px;
+    cursor: pointer;
+    padding: 0 5px;
+    transition: color 0.2s;
+}
+
+.delete-btn:hover {
+    color: #a71d2a;
+}
